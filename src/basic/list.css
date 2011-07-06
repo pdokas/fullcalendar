@@ -1,0 +1,24 @@
+
+/* List View
+------------------------------------------------------------------------*/
+
+.fc-view-basicList table,
+.fc-view-basicList thead,
+.fc-view-basicList tbody,
+.fc-view-basicList tr,
+.fc-view-basicList th,
+.fc-view-basicList td {
+	display: block;
+}
+	
+.fc-view-basicList thead {
+	display: none !important;
+}
+
+.fc-view-basicList .fc-day-number {
+	float: none;
+}
+
+.fc-view-basicList td {
+	border: none !important;
+}

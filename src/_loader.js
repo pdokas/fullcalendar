@@ -18,6 +18,7 @@ startload();
 css('main.css');
 css('common/common.css');
 css('basic/basic.css');
+css('basic/list.css');
 css('agenda/agenda.css');
 cssprint('common/print.css');
 
@@ -45,6 +46,7 @@ js('EventManager.js');
 js('date_util.js');
 js('util.js');
 
+js('basic/BasicListView.js');
 js('basic/MonthView.js');
 js('basic/BasicWeekView.js');
 js('basic/BasicDayView.js');

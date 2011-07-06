@@ -1,9 +1,6 @@
 
 fcViews.basicDay = BasicDayView;
 
-//TODO: when calendar's date starts out on a weekend, shouldn't happen
-
-
 function BasicDayView(element, calendar) {
 	var t = this;
 	
