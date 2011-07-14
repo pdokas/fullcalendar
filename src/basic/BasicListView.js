@@ -17,21 +17,19 @@ function ListView(element, calendar) {
 
 
 	function render(date, delta) {
-		var start = cloneDate(date);
-		var end = addMonths(cloneDate(start), 4);
+		if (delta) {
+			addDays(date, delta);
+			if (!opt('weekends')) {
+				skipWeekend(date, delta < 0 ? -1 : 1);
+			}
+		}
+		t.title = formatDate(date, opt('titleFormat'));
+		var start = cloneDate(date, true);
+		var end = addMonths(cloneDate(start), 5);
 		var visStart = cloneDate(start);
 		var visEnd = cloneDate(end);
-		var weekends = opt('weekends');
-		// if (!weekends) {
-		// 	skipWeekend(visStart);
-		// 	skipWeekend(visEnd, -1, true);
-		// }
-		t.title = 'List';
-		t.start = start;
-		t.end = end;
-		t.visStart = visStart;
-		t.visEnd = visEnd;
-		renderBasic(50, 50, 7, true);
+		var firstDay = opt('firstDay');
+		renderBasic(5, 5, 1, true);
 	}
 
 
