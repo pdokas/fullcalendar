@@ -19,17 +19,13 @@ function ListView(element, calendar) {
 	function render(date, delta) {
 		if (delta) {
 			addDays(date, delta);
-			if (!opt('weekends')) {
-				skipWeekend(date, delta < 0 ? -1 : 1);
-			}
 		}
 		t.title = formatDate(date, opt('titleFormat'));
-		var start = cloneDate(date, true);
-		var end = addMonths(cloneDate(start), 5);
-		var visStart = cloneDate(start);
-		var visEnd = cloneDate(end);
-		var firstDay = opt('firstDay');
-		renderBasic(5, 5, 1, true);
+		t.start = cloneDate(date, true);
+		t.end = addMonths(cloneDate(t.start), 5);
+		t.visStart = cloneDate(t.start);
+		t.visEnd = cloneDate(t.end);
+		renderBasic(5, 5, 7, true);
 	}
 
 
